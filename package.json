@@ -1,0 +1,35 @@
+{
+  "name": "pmc-cite-ref",
+  "version": "1.0.0",
+  "description": "A module for collecting references and citations of an article indexed in PubMed.",
+  "main": "main.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobSullivan/pmc-cite-ref.git"
+  },
+  "keywords": [
+    "research",
+    "communication",
+    "PubMed",
+    "PubMed Central",
+    "references",
+    "citations"
+  ],
+  "author": "Robert Sullivan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RobSullivan/pmc-cite-ref/issues"
+  },
+  "homepage": "https://github.com/RobSullivan/pmc-cite-ref#readme",
+  "dependencies": {
+    "eslint": "2.3.0",
+    "mofo-style": "2.3.0",
+    "request": "2.69.0"
+  }
+}
