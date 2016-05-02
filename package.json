@@ -7,7 +7,10 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "npm test"
+    "test": "npm run test-citations && npm run test-refs && npm run test-docs",
+    "test-citations": "mocha --ui tdd -R list tests/pipeline/tests/citation.controller.unit.tests.js",
+    "test-refs": "mocha --ui tdd -R list tests/pipeline/tests/reference.controller.unit.tests.js",
+    "test-docs": "mocha --ui tdd -R list tests/pipeline/tests/document.controller.unit.tests.js"
   },
   "repository": {
     "type": "git",
@@ -28,12 +31,10 @@
   },
   "homepage": "https://github.com/RobSullivan/pmc-cite-ref#readme",
   "dependencies": {
-    "elementtree": "0.1.6",
+    "async": "2.0.0-rc.3",
     "eslint": "2.3.0",
-    "libxmljs": "0.17.1",
     "mofo-style": "2.3.0",
-    "node-expat": "2.3.13",
     "request": "2.69.0",
-    "xml-stream": "0.4.5"
+    "xmldoc": "0.5.0"
   }
 }
