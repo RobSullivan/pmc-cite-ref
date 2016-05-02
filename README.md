@@ -1,26 +1,24 @@
 # pmc-cite-ref
 
-Request reference and citation data from PubMed. Return as object.
+Gets the references and citations for an article that have been indexed by PubMed.
 
-Designed to be a module to get from npm.
+Aim is to publish as a module on npm so can use in other projects where this data is needed.
 
-Datastore agnostic. Writing to a database would require extra processing.
+So far...
 
-elink.js makes the request to eutils/elink. 
+index.js uses async.waterfall to elink.js makes the request to elink. 
 
-response.js is the callback to catch the data or error.
+elink.js wraps request to ncbi elink database.
 
-linkset.js extracts the pmids of references or citations.
+linkset.js uses xmldoc to pull out  the pmids of references or citations.
 
 Example pmid = 24282674
+
+
+
 
 Further resources
 https://www.npmjs.com/package/request
 http://eslint.org/
-https://github.com/MozillaFoundation/mofo-style
 http://www.ncbi.nlm.nih.gov/books/NBK1058/
 http://www.ncbi.nlm.nih.gov/books/NBK25499/#chapter4
-
-Not using ES6 settings such as backticks for strings but am using camelCase
-
-eslint --config ./node_modules/mofo-style/.eslintrc.yaml
